@@ -1,0 +1,61 @@
+﻿<Window x:Class="TicTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tic Tac Toe Made by Korbin TenBrink" Height="700" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Name="grid1" Margin="165,119,185,180">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="button1" Grid.Row="0" Grid.Column="0" Width="100" Height="100" FontSize="30" Margin="5" Background="#FF0096BD"/>
+            <Button Name="button2" Grid.Row="0" Grid.Column="1" Width="100" Height="100" FontSize="30" Margin="5" Background="#FF0096BD"/>
+            <Button Name="button3" Grid.Row="0" Grid.Column="2" Width="100" Height="100" FontSize="30" Margin="5" Background="#FF0096BD"/>
+            <Button Name="button4" Grid.Row="1" Grid.Column="0" Width="100" Height="100" FontSize="30" Margin="5" Background="#FF0096BD"/>
+            <Button Name="button5" Grid.Row="1" Grid.Column="1" Width="100" Height="100" FontSize="30" Margin="5" Background="#FF0096BD"/>
+            <Button Name="button6" Grid.Row="1" Grid.Column="2" Width="100" Height="100" FontSize="30" Margin="5" Background="#FF0096BD"/>
+            <Button Name="button7" Grid.Row="2" Grid.Column="0" Width="100" Height="100" FontSize="30" Margin="5" Background="#FF0096BD"/>
+            <Button Name="button8" Grid.Row="2" Grid.Column="1" Width="100" Height="100" FontSize="30" Margin="5" Background="#FF0096BD"/>
+            <Button Name="button9" Grid.Row="2" Grid.Column="2" Width="100" Height="100" FontSize="30" Margin="5" Background="#FF0096BD"/>
+        </Grid>
+        <Label Content="You" HorizontalAlignment="Left" Margin="12,210,0,0" VerticalAlignment="Top" Height="59" Width="110" FontSize="24" RenderTransformOrigin="0.545,0.068" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="label1" Content="Timer:  seconds" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" Height="54" Width="370" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="50,20,0,0" VerticalAlignment="Top" Height="69" Width="42" FontSize="48"/>
+        <Label x:Name="turnLabel" Content="Select A Opponent" HorizontalAlignment="Left" Margin="165,74,0,0" VerticalAlignment="Top" Height="49" Width="335" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="O" HorizontalAlignment="Left" Margin="581,20,0,0" VerticalAlignment="Top" Height="69" Width="44" FontSize="48"/>
+        <Label x:Name="Player2label" Content="Opponent" HorizontalAlignment="Left" Margin="503,216,0,0" VerticalAlignment="Top" Height="59" Width="185" FontSize="24" HorizontalContentAlignment="Center"/>
+        <Image x:Name="XImage" Margin="10,80,555,454" Source="/download (8).png" Stretch="Fill"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="165,468,0,88" Width="335">
+            <Label x:Name="Player1ScoreLabel" Content="Player 1: 0" Margin="10" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="Player2ScoreLabel" Content="Player 2: 0" FontSize="24" Width="197" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <Image x:Name="OImage" Margin="542,80,24,454" Source="/download (8).png" Stretch="Fill"/>
+        <Label x:Name="scoreboard" Content="Scoreboard:" HorizontalAlignment="Left" Margin="253,454,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Height="78" Width="404" Margin="0,535,0,0">
+            <Label Content="Opponent:" VerticalAlignment="Center" FontSize="20"/>
+            <ComboBox x:Name="OpponentComboBox" SelectedIndex="0" Margin="5" Height="34" Width="165" FontSize="20" SelectionChanged="OpponentComboBox_SelectionChanged">
+                <ComboBoxItem x:Name="Opponent" Content="Opponent"/>
+                <ComboBoxItem x:Name="Human" Content="Human Player"/>
+                <ComboBoxItem x:Name="Random" Content="Random Player"/>
+            </ComboBox>
+            <Button x:Name="StartButton" Content="Start Game" Click="StartGame_Click" Height="34" Width="110" FontSize="20"/>
+        </StackPanel>
+        <Label x:Name="playerLabel" Content="" HorizontalAlignment="Center" Margin="0,596,0,0" VerticalAlignment="Top" Height="59" Width="336" FontSize="25"/>
+        <Label x:Name="Player2label2" Content="Player 2:" HorizontalAlignment="Left" Margin="554,185,0,0" VerticalAlignment="Top" Height="59" Width="110" FontSize="24"/>
+        <Label x:Name="You" Content="Player1:" HorizontalAlignment="Left" Margin="22,185,0,0" VerticalAlignment="Top" Height="59" Width="110" FontSize="24" RenderTransformOrigin="0.545,0.068"/>
+        <Label x:Name="title" Content="Tic Tac Toe" HorizontalAlignment="Center" VerticalAlignment="Top" Height="54" Width="492" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-16,0,0" FontStyle="Italic"/>
+        <Label Content="___________________________________________________________________________" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Width="220" FontSize="20"/>
+    </Grid>
+</Window>
+
+
